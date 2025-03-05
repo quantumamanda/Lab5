@@ -1,0 +1,27 @@
+#Amanda Withrow
+#March 4, 2025
+#This program will show the total amount of bottles that have been collected over 7 days. The end result will print the number of bottles as well as the payout amount. User will be able to use the program multiple times with different inputs.
+
+#Declare variables below
+total_bottles=0 
+counter=1
+today_bottles=0
+total_payout=0.0
+keep_going="y"
+
+#Loop to run the program again
+while keep_going=="y":
+    total_bottles=0
+    counter=1
+    while counter <=7: #This is a part of the while loop and the program will keep executing this as long as it is true.
+        today_bottles=int(input(f"Enter number of bottles for day #{counter}:  ")) #This prompts the user to input number of bottles.
+        total_bottles+=today_bottles
+        counter+=1
+    total_payout=total_bottles*0.10
+
+#Adding print statements below
+    print(f"The total number of bottles collected is {total_bottles}") 
+    print(f"The total paid out is $ {total_payout:.1f}") #This will print the payout dollar amount
+    print("Do you want to enter another week's worth of data?")
+    print("Enter y or n")
+    keep_going=input() #This will allow the user to enter a fresh set of inputs
